@@ -6,8 +6,7 @@
 getZones() {
   local result=$(curl -L --silent \
     -X GET "https://api.cloudflare.com/client/v4/zones" \
-    -H "X-Auth-Email: ${CF_EMAIL}" \
-    -H "X-Auth-Key: ${CF_AUTH_KEY}" \
+    -H "Authorization: bearer ${CF_AUTH_TOKEN}" \
     -H "Content-Type: application/json")
   echo "$result"
 }
@@ -15,7 +14,7 @@ getZones() {
 
 if [ -z ${CF_AUTH_KEY+x} ]; then
   echo "-----> Can't get zones"
-  echo "       Set CF_AUTH_KEY & CF_EMAIL"
+  echo "       Set CF_AUTH_TOKEN"
 else
   result=$(getZones)
   echo "       ${result}"

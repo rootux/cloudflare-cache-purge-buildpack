@@ -21,8 +21,7 @@ fi
 purgeCache() {
   local result=$(curl -L --write-out %{http_code} --silent --output /dev/null \
     -X POST "https://api.cloudflare.com/client/v4/zones/${CF_ZONE_ID}/purge_cache" \
-		-H "X-Auth-Email: ${CF_EMAIL}" \
-    -H "X-Auth-Key: ${CF_AUTH_KEY}" \
+    -H "Authorization: bearer ${CF_AUTH_TOKEN}" \
 		-H "Content-Type: application/json" \
     --data '{"purge_everything":true}')
   echo "$result"
