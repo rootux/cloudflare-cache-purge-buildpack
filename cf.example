@@ -6,7 +6,7 @@
 #
 # $> ./cf bin/compile
 
-CF_AUTH_KEY=my_key; export CF_AUTH_KEY
+CF_AUTH_TOKEN=my_key; export CF_AUTH_TOKEN
 CF_EMAIL=email@example.com; export CF_EMAIL
 CF_ZONE_ID=my_zone_id; export CF_ZONE_ID
 

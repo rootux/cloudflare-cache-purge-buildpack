@@ -12,7 +12,7 @@ getZones() {
 }
 
 
-if [ -z ${CF_AUTH_KEY+x} ]; then
+if [ -z ${CF_AUTH_TOKEN+x} ]; then
   echo "-----> Can't get zones"
   echo "       Set CF_AUTH_TOKEN"
 else
