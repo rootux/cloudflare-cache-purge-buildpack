@@ -3,7 +3,6 @@
 # This buildpack will purge your app's Cloudflare cache given the following environment variables:
 # CF_ZONE_ID
 # CF_AUTH_TOKEN
-# CF_EMAIL
 # API used: https://api.cloudflare.com/#zone-purge-all-files
 
 
