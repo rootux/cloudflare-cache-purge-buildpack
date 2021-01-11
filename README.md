@@ -22,7 +22,7 @@ Run the following against your Heroku application:
 heroku config:set CF_ZONE_ID=my_zone_id
 heroku config:set CF_AUTH_TOKEN=my_auth_token
 
-heroku buildpacks:add https://github.com/jamesmartin/cloudflare-cache-purge-buildpack.git
+heroku buildpacks:add https://github.com/rootux/cloudflare-cache-purge-buildpack.git
 git push heroku master
 ```
 
